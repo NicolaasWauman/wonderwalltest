@@ -1,0 +1,14 @@
+{
+  "papers": [
+    {
+      "id": 1,
+      "name": "fa101",
+      "eigenschap": "mat"
+    },
+    {
+      "id": 2,
+      "name": "fs401",
+      "eigenschap": "barriet"
+    }
+  ]
+}
