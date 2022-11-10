@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "name": "FA101",
+    "eigenschap": "MAT",
+    "text": " Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard",
+    "fineArtLabel": true,
+    "spray": true,
+    "drager": true
+  },
+  {
+    "id": 4,
+    "name": "MA101",
+    "eigenschap": "MAT",
+    "text": " Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard",
+    "fineArtLabel": true,
+    "spray": true,
+    "drager": true
+  },
+  {
+    "id": 2,
+    "name": "FS401",
+    "eigenschap": "barriet",
+    "text": " Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard ",
+    "fineArtLabel": true,
+    "spray": true,
+    "drager": true
+  },
+  {
+    "id": 3,
+    "name": "FS601",
+    "eigenschap": "barriet",
+    "text": " Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard",
+    "fineArtLabel": true,
+    "spray": true,
+    "drager": true
+  },
+
+  {
+    "id": 5,
+    "name": "FT502",
+    "eigenschap": "mat met structuur ",
+    "text": " Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard",
+    "fineArtLabel": true,
+    "spray": true,
+    "drager": true
+  },
+  {
+    "id": 6,
+    "name": "FT504",
+    "eigenschap": "mat met veel structuur",
+    "text": " Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard",
+    "fineArtLabel": true,
+    "spray": true,
+    "drager": true
+  },
+  {
+    "id": 7,
+    "name": "AV801",
+    "eigenschap": "Fine art mat met reliëf",
+    "text": " Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard",
+    "fineArtLabel": true,
+    "spray": true,
+    "drager": true
+  },
+  {
+    "id": 8,
+    "name": "CM501",
+    "eigenschap": "Fine art mat met reliëf",
+    "text": " Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard",
+    "fineArtLabel": true,
+    "spray": true,
+    "drager": true
+  }
+]

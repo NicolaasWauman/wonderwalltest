@@ -1,10 +1,13 @@
 import React from "react";
 import Header from "./components/header";
-// import Header2 from "./components/header2";
+
 import Footer from "./components/footer";
-import Main from "./components/main";
+import LoginForm from "./components/login/loginForm";
+import SignupForm from "./components/login/signupForm";
+import Home from "./components/home";
 import PapersOverview from "./components/papersOverview";
-import Paper from "./components/paper";
+import PaperBig from "./components/paperBig";
+import NewPaper from "./components/admin/newPaper";
 import {
   BrowserRouter as Router,
   Routes,
@@ -12,23 +15,30 @@ import {
   Link,
   useParams,
 } from "react-router-dom";
-
-const log = () => {
-  console.log("hello");
-};
+import { Meteor, currentUser } from "meteor/meteor";
+import { useTracker } from "meteor/react-meteor-data";
 
 export const App = (props) => {
+  const user = useTracker(() => Meteor.user()); // this will track de current user logged in
+
+  const logout = () => Meteor.logout();
+
   return (
     <div>
       <Router>
-        <Header />
+        <Header user={user} logout={logout} />
 
         <Routes>
-          <Route path="/" element={<Main log={log} />} />
+          <Route path="/" element={<Home />} />
           <Route path="papers" element={<PapersOverview />} />
-          <Route path="papers/:id" element={<Paper />} />
+          <Route path="papers/:id" element={<PaperBig />} />
+
+          <Route path="signin" element={<LoginForm />} />
+          <Route path="signup" element={<SignupForm />} />
+          <Route path="paperspaper" element={<NewPaper />} />
         </Routes>
       </Router>
+
       <Footer />
     </div>
   );

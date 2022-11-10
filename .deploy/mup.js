@@ -4,15 +4,16 @@ module.exports = {
       // TODO: set host address, username, and authentication method
       host: "167.235.141.236",
       username: "root",
-      pem: "~/.ssh/id_rsa",
-      password: "fotoposter",
+      // pem: "~/.ssh/id_rsa",
+      // password:"fotoposter"
       // or neither for authenticate from ssh-agent
+      // gedaan met ssh-agent, zie meteor docs,eerst: eval $(ssh-agent), dan: ssh-add ~/.ssh/id_rsa, daarna: mup setup, mup deploy, ssh-agent -k
     },
   },
 
   app: {
     // TODO: change app name and path
-    name: "wonderwall_test",
+    name: "wonderwalltest",
     path: "../.",
 
     servers: {

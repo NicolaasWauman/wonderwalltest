@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+// import("tailwindcss").Config;
 module.exports = {
   content: ["./imports/ui/**/*.{js,jsx,ts,tsx}", "./client/*.html"],
   theme: {
@@ -33,6 +33,10 @@ module.exports = {
       },
       borderRadius: {
         "4xl": "2rem",
+      },
+      backgroundImage: {
+        "hero-pattern": "url('/logoWW')",
+        "footer-texture": "url('/img/footer-texture.png')",
       },
     },
   },

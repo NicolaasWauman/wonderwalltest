@@ -3,15 +3,16 @@ import Button1 from "./tools/button";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const main = (props) => {
+const home = (props) => {
   [count, setCount] = useState(0);
 
   const navigate = useNavigate();
 
   return (
     <>
-      <div className="flex justify-around py-10">
-        <Button1 log={props.log} />
+      <div className="flex justify-around py-10 h-[1000px]">
+        <h1 className="text-3xl">HOME</h1>
+        {/* <Button1 log={props.log} />
 
         <Button1 />
         <button
@@ -27,10 +28,10 @@ const main = (props) => {
           {" "}
           +10
         </button>
-        <h1>counter: {count}</h1>
+        <h1>counter: {count}</h1> */}
       </div>
     </>
   );
 };
 
-export default main;
+export default home;

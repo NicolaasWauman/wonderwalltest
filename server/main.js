@@ -1,31 +1,58 @@
-import { Meteor } from 'meteor/meteor';
-import { LinksCollection } from '/imports/api/links';
+import { Meteor } from "meteor/meteor";
+import { Accounts } from "meteor/accounts-base";
+import { PapersCollection } from "../imports/db/PapersCollection";
+import "/imports/api/papersMethods";
+import "/imports/api/paperPublications";
 
-function insertLink({ title, url }) {
-  LinksCollection.insert({title, url, createdAt: new Date()});
-}
+import papers from "../public/papers.json";
+
+const SEED_USERNAME = "user";
+const SEED_PASSWORD = "password";
 
 Meteor.startup(() => {
-  // If the Links collection is empty, add some data.
-  if (LinksCollection.find().count() === 0) {
-    insertLink({
-      title: 'Do the Tutorial',
-      url: 'https://www.meteor.com/tutorials/react/creating-an-app'
-    });
-
-    insertLink({
-      title: 'Follow the Guide',
-      url: 'http://guide.meteor.com'
-    });
-
-    insertLink({
-      title: 'Read the Docs',
-      url: 'https://docs.meteor.com'
-    });
-
-    insertLink({
-      title: 'Discussions',
-      url: 'https://forums.meteor.com'
+  if (PapersCollection.find({}).count() < 1) {
+    papers.map((paper) => {
+      PapersCollection.insert(paper);
     });
   }
+
+  // if (!Accounts.findUserByUsername(SEED_USERNAME)) {
+  //   Accounts.createUser({
+  //     username: SEED_USERNAME,
+  //     password: SEED_PASSWORD,
+  //   });
+  // }
+  //SEND USER DATA
+  // Meteor.publish("users", function () {
+  //   console.log("Server Log: publishing all users");
+  //   return Meteor.users.find();
+  // });
+  // Meteor.publish("userData", function () {
+  //   if (this.userId) {
+  //     return Meteor.users.find(
+  //       { _id: this.userId },
+  //       {
+  //         fields: { other: 1, things: 1 },
+  //       }
+  //     );
+  //   } else {
+  //     this.ready();
+  //   }
+  // });
 });
+
+// Accounts.validateNewUser((user) => {
+//   new SimpleSchema({
+//     _id: { type: String },
+//     username: { type: String },
+//     emails: { type: Array },
+//     "emails.$": { type: Object },
+//     "emails.$.address": { type: String },
+//     "emails.$.verified": { type: Boolean },
+//     createdAt: { type: Date },
+//     services: { type: Object, blackbox: true },
+//   }).validate(user);
+
+// Return true to allow user creation to proceed
+// return true;
+// });
